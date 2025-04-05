@@ -29,18 +29,21 @@ export default function Home() {
   return (
     <div className="w-full h-screen flex items-center justify-center flex-col">
       <div className="w-full max-w-[750px] gap-4 flex flex-col">
-        <h1 className="font-heading text-pretty text-center text-[29px] font-semibold tracking-tighter text-gray-900 sm:text-[32px] md:text-[46px]">
-          What can I help you ship?
-        </h1>
+        <div className="space-y-2 mb-4">
+          <div className="bg-neutral-900 rounded-xl size-[42px]"></div>
+          <h1 className="font-heading text-pretty text-center text-[29px] font-semibold tracking-tighter text-gray-900 sm:text-[32px] md:text-[46px]">
+            What can I help you ship?
+          </h1>
+        </div>
 
         <PromptInput
           value={input}
           onValueChange={handleValueChange}
           isLoading={isLoading}
           onSubmit={handleSubmit}
-          className="w-full"
+          className="w-full transition-shadow"
         >
-          <PromptInputTextarea placeholder="Ask me anything..." />
+          <PromptInputTextarea placeholder="Ask Crafty to build..." />
           <PromptInputActions className="justify-end pt-2">
             <PromptInputAction
               tooltip={isLoading ? "Stop generation" : "Send message"}
@@ -60,7 +63,6 @@ export default function Home() {
             </PromptInputAction>
           </PromptInputActions>
         </PromptInput>
-
       </div>
     </div>
   );

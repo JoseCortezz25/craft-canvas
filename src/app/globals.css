@@ -163,3 +163,23 @@
     @apply bg-background text-foreground;
   }
 }
+
+.transition-shadow {
+  transition-property: box-shadow;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-duration: .15s;
+}
+
+
+.chat-interface {
+  @apply h-screen px-3 py-2 flex flex-col justify-between;
+
+  .chat-interface__header {
+    @apply flex items-center gap-3 py-3  border-b border-b-neutral-200;
+
+    h2 {
+      @apply text-[18px] font-bold;
+    }
+  }
+
+}

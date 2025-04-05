@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn(inter.className, "bg-[#f8f4f1]")}>{children}</body>
+      <body className={cn(inter.className, "bg-[#ffffff]")}>{children}</body>
     </html>
   );
 }
